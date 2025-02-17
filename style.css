@@ -1,9 +1,9 @@
-:root{
-    --accent-color: rgb(0, 13, 128);
-    --primary-color: rgb(0, 0, 0);
-    --secondary-color: rgb(86, 85, 85);
-    --font-size:16px;
-    --section: 8px
+:root {
+  --accent-color: rgb(187, 236, 219);
+  --primary-color: rgb(255, 255, 255);
+  --secondary-color: rgb(86, 85, 85);
+  --font-size: 16px;
+  --section: 8px;
 }
 
 * {
@@ -14,5 +14,66 @@
 
 body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;    
+    "Lucida Sans", Arial, sans-serif;
+  background: url("./assets/img/flyer.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+  background-blend-mode: multiply;
+  color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 700px;
+  border: 1px solid var(--accent-color);
+  border-radius: 20px;
+  background-color: rgba(0, 73, 0, 0.675);
+  padding: 50px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  color: var(--accent-color);
+}
+section {
+  display: flex;
+  margin-top: 10px;
+}
+
+.label,
+.input {
+  padding: 10px;
+  font-size: 1rem;
+  /* width: 50%; */
+}
+.input {
+  background: linear-gradient(
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.116)
+  );
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  outline: none;
+  color: var(--primary-color);
+  width: 60%;
+}
+::placeholder {
+  color: rgb(168, 168, 168);
+}
+.label {
+  width: 40%;
+  color: var(--accent-color);
+}
+option{
+  color: rgb(168, 168, 168);
 }
