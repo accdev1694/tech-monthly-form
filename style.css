@@ -1,0 +1,18 @@
+:root{
+    --accent-color: rgb(0, 13, 128);
+    --primary-color: rgb(0, 0, 0);
+    --secondary-color: rgb(86, 85, 85);
+    --font-size:16px;
+    --section: 8px
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;    
+}
