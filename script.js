@@ -34,9 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
           <input class="input" type="number" min="7" max="18" required>
         </section>
         <section>
-          <label class="label">Select Course:</label>
+          <label class="label">Child's Course:</label>
           <select class="input course-select" required>
-            <option value="">Course</option>
+            <option value="">Select a Course</option>
             ${Object.entries(courses)
               .map(
                 ([key, course]) =>
@@ -47,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </section>        
         <section class="downloads">
           <button type="button" class="download-btn">Curriculum</button>
+          <a href="#" class="timetable-btn" target="_blank">Time Table</a>
           <a href="#" class="chatroom-btn" target="_blank">Class Chat</a>
         </section>
           

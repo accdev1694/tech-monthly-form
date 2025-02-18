@@ -48,13 +48,13 @@ header {
   color: var(--accent-color);
   display: block;
 }
-header p{
+header p {
   font-size: 0.7rem;
   padding-top: 5px;
 }
 section {
   display: flex;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .label,
@@ -94,9 +94,10 @@ option {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   width: 100%;
+  background: rgba(138, 210, 138, 0.2);
 }
 
-.children-container{
+.children-container {
   display: block;
   margin-top: 50px;
 }
@@ -109,16 +110,9 @@ option {
   width: 100%;
 }
 
-.download{
-  display: none;
-  justify-content: space-between;   
-  /* margin: auto; */
-}
-
-
-
 .download-btn,
-a.chatroom-btn {
+.chatroom-btn,
+.timetable-btn {
   background: none;
   color: var(--primary-color);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -133,25 +127,23 @@ a.chatroom-btn {
   width: 100px;
   color: var(--accent-color);
   /* font-weight: 800; */
-}
-a.chatroom-btn{
   text-decoration: none;
   display: inline-block;
-
+  transition: 0.2s all ease-in-out;
 }
 
 .download-btn:hover,
-.chatroom-btn:hover {
-  opacity: 0.8;
+.chatroom-btn:hover,
+.timetable-btn:hover {
+  background: rgba(138, 210, 138, 0.2);
 }
 
 .payment-section {
   margin-top: 20px;
-  padding: 15px;
-  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px 15px 8px 15px;
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
-  width: 250px;
-  vertical-align: middle;
+  width: fit-content;
 }
 
 .promo-message {
@@ -172,12 +164,20 @@ a.chatroom-btn{
   width: 100%;
   color: rgb(5, 85, 5);
   font-weight: 900;
+  transition: ease-in-out 0.2s all;
+  border: 1px solid rgb(187, 236, 219);
+}
+
+.submit-btn:hover {
+  background: rgba(187, 236, 219, 0.3);
+  border: 1px solid rgb(187, 236, 219);
+  color: white;
 }
 
 section.downloads {
   /* flex-direction: row; */
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   gap: 10px;
 }
 
@@ -193,10 +193,18 @@ section.downloads {
   }
 
   section.downloads {
-    flex-direction: row;
+    flex-direction: column;
     display: flex;
     justify-content: center;
     gap: 5px;
+  }
+
+  .download-btn,
+  .chatroom-btn,
+  .timetable-btn {
+    width: 100%;
+    margin: 5px auto;
+    padding: 10px 0;
   }
 
   .label,
@@ -215,7 +223,7 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-select.input.course-select{
+select.input.course-select {
   width: 60%;
   margin-bottom: 20px;
 }
