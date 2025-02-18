@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tech Monthly Registration Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
       <!-- header -->
-      <header><h1>Tech Monthly Registration Form</h1></header>
+      <header><h1>Tech Monthly Registration Form</h1>
+      <p>February 2025 Cohot</p></header>
       <!-- main -->
 
       <main>
@@ -17,34 +19,74 @@
           <!-- sponsor's name -->
           <section class="name-section">
             <label class="label" for="name">Name of Sponsor:</label>
-            <input class="input"
+            <input
+              class="input"
               id="name"
               name="name"
               type="text"
               placeholder="James Brown"
+              required
             />
           </section>
 
           <!-- sponsor's email -->
           <section class="email-section">
             <label class="label" for="email">Sponsor's Email:</label>
-            <input class="input"
+            <input
+              class="input"
               id="email"
               name="email"
               type="email"
               placeholder="jamiebee@email.try"
+              required
             />
           </section>
 
           <!-- sponsor relationship to child -->
           <section class="relationship">
-            <label class="label" for="relationship">Relationship to Child:</label>
-            <select class="input">
-                <option value="select">Select an Option</option>
-                <option value="parent">Parent</option>
-                <option value="other">Family Member</option>
-                <option value="friend">Family Friend</option>
+            <label class="label" for="relationship"
+              >Relationship to Child:</label
+            >
+            <select class="input" required>
+              <option value="select">Select an Option</option>
+              <option value="parent">Parent</option>
+              <option value="other">Family Member</option>
+              <option value="friend">Family Friend</option>
             </select>
+          </section>
+
+          <!-- how many children -->
+          <section class="how-many-children">
+            <label for="kids-count" class="label">Number of Children:</label>
+            <input
+              id="kids-count"
+              type="number"
+              class="input"
+              min="1"
+              value="1"
+              name="kids-count"
+              required
+            />
+          </section>
+
+          <!-- Child Sections Container -->
+          <section class="children-container"></section>
+
+          <!-- Dynamic Elements Section -->
+          <section class="dynamic-content">
+            <div class="curriculum-download"></div>
+            <div class="chatroom-links"></div>
+            <div class="payment-section">
+              <h3>Total Amount: £<span id="total-amount">0</span></h3>
+              <p class="promo-message"></p>
+            </div>
+          </section>
+
+          <!-- Submit Button -->
+          <section class="submit-section">
+            <button type="submit" class="submit-btn">
+              Complete Registration
+            </button>
           </section>
         </form>
       </main>
